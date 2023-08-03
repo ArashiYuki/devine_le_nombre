@@ -1,0 +1,32 @@
+/* TODO changer les fichiers css en scss (nesting = plus simple) */
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Tektur&display=swap');
+
+h1 {
+  font-family: 'Tektur', cursive;
+  text-align: center;
+}
+
+.rules {
+  width: 50%;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+/* ------------- PLAY ---------------- */
+.play {
+  text-align: center;
+}
+
+a {
+  font-size: larger;
+  font-weight: bold;
+  font-family: 'Tektur', cursive;
+  padding: .4rem;
+  color: white;
+  background-color: darkgreen;
+  border: 5px solid darkgreen;
+  border-radius: 30px;
+  text-decoration: none;
+}
+/* ----------------------------- */
