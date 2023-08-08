@@ -1,38 +1,43 @@
 // Limit and number to guess
 var maximum = 50;
 var numberToGuess;
-var result;
 var arrowUp;
 var arrowDown;
+var congratulation;
 var input;
 
 function start(max) {
   maximum = max;
   numberToGuess = Math.floor(Math.random() * (maximum+1));
-  console.log(numberToGuess)
 
   var label = document.querySelector('#label_number_user');
   label.innerText = `Votre nombre (0-${maximum}):`;
 
   input = document.querySelector('#number_user');
   input.max = maximum;
+  input.value = null;
 
   // Element to display or not according to events
-  result = document.querySelector('#result');
   arrowUp = document.querySelector('#arrow_up');
   arrowDown = document.querySelector('#arrow_down');
+  congratulation = document.querySelector('#congratulation');
+  arrowUp.style.visibility = 'hidden';
+  arrowDown.style.visibility = 'hidden';
+  congratulation.style.visibility = 'hidden';
 }
 
 
 function verification() {
   // Manages input without selection of the game range
   if (!numberToGuess) {
-    prompt("Vous devez d'abord sélectionner un des choix à gauche.");
+    alert("Vous devez d'abord sélectionner un des choix à gauche.");
     return null;
   }
 
   let numberPlayer = input.value;
-  console.log(numberPlayer, numberToGuess);
+
+  arrowUp.style.visibility = 'hidden';
+  arrowDown.style.visibility = 'hidden';
 
   // Handles out-of-bounds values 
   if (numberPlayer > maximum) {
@@ -45,16 +50,19 @@ function verification() {
 
   // Check if the user's number is or is not the number to guess
   if (numberPlayer == numberToGuess) {
-    console.log(`Félicitation ! Le nombre a deviner était bien ${numberToGuess}.`);
+    congratulation.style.fontSize = '2rem';
+    congratulation.innerText = `Félicitation ! Le nombre à deviner était bien ${numberToGuess}.`;
+    congratulation.style.visibility = 'visible';
   }
   else if (numberPlayer > numberToGuess) {
-    console.log('Le nombre a deviner est plus petit.');
-    arrowUp.style.visibility = 'hidden';
-    arrowDown.style.visibility = 'visible';
+    // If the result is the same (smaller twice in a row) the arrow must disappear and reappear
+    setTimeout(() => {
+      arrowDown.style.visibility = 'visible';
+    }, "100");
   }
   else {
-    console.log('Le nombre a deviner est plus grand.');
-    arrowDown.style.visibility = 'hidden';
-    arrowUp.style.visibility = 'visible';
+    setTimeout(() => {
+      arrowUp.style.visibility = 'visible';
+    }, "100");
   }
 }

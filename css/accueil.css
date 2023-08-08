@@ -1,6 +1,9 @@
-/* TODO changer les fichiers css en scss (nesting = plus simple) */
-
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Tektur&display=swap');
+
+body {
+  background: url('../img/10026.jpg') 100%;
+  margin-top: 5rem;
+}
 
 h1 {
   font-family: 'Tektur', cursive;

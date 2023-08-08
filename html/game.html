@@ -18,30 +18,28 @@
   <div class="game">
     <section class="choice">
       <h2> CHOIX</h2>
-      <button onclick="start(50)">0 à 50</button>
-      <button onclick="start(100)">0 à 100</button>
-      <button onclick="start(150)">0 à 150</button>
-      <button onclick="start(200)">0 à 200</button>
-      <button onclick="start(500)">0 à 500</button>
-      <button onclick="start(1000)">0 à 1000</button>
+      <button onclick="start(50)" class="choice-button choice-button-1">0 à 50</button>
+      <button onclick="start(100)" class="choice-button choice-button-2">0 à 100</button>
+      <button onclick="start(150)" class="choice-button choice-button-3">0 à 150</button>
+      <button onclick="start(200)" class="choice-button choice-button-4">0 à 200</button>
+      <button onclick="start(500)" class="choice-button choice-button-5">0 à 500</button>
+      <button onclick="start(1000)" class="choice-button choice-button-6">0 à 1000</button>
     </section>
     <section class="guess">
       <div class="user">
-        <!-- TODO : changer les nombres afin qu'ils correspondent au choix de l'utilisateur -->
         <label for="number_user" id="label_number_user"></label>
         <input type="number" id="number_user" name="number_user" min="0" max="50" />
-        <!-- Ce bouton lancera la fonction qui vérifiera si le chiffre entré par l'utilisateur est le même que le nombre à deviner-->
         <button class="checking" onclick="verification()">OK</button>
       </div>
       <div id="result">
-        <!-- Affichera le bon emoticon à droite du bouton OK -->
         <p id="arrow_up">⬆️</p>
         <p id="arrow_down">⬇️</p>
+        <p id="congratulation"></p>
       </div>
     </section>
   </div>
   <footer>
-    <p>Made by ArashiYuki. ©ArashiYuki 08/2023</p>
+    <p>Made by ArashiYuki. ©ArashiYuki 08/2023. Background <a href="http://www.freepik.com">designed by kjpargeter / Freepik</a></p>
   </footer>
 </body>
 </html>
