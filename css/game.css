@@ -62,7 +62,7 @@ label {
 /* ---------------------------------- */
 
 /* ------------- RESULT ---------------- */
-.result, .arrow_up, .arrow_down {
+#result, #arrow_up, #arrow_down {
   display: inline;
   visibility: hidden;
 }
