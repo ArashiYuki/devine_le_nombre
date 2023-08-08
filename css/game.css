@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Tektur&display=swap');
 
+body {
+  background: url('../img/10026.jpg') fixed;
+}
+
 /* ------------- HEADER ---------------- */
 #help {
   font-size: 2rem;
+  color: seagreen;
 }
 
 h1 {
@@ -18,8 +23,13 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
+/* ---------------------------------- */
 
 /* ------------- CHOICE ---------------- */
+h2 {
+  margin-bottom: 0;
+}
+
 .choice {
   width: 25%;
   display: flex;
@@ -27,9 +37,41 @@ h1 {
   align-items: center;
 }
 
-button {
+.choice-button {
   margin: 1rem 0;
   cursor: pointer;
+  width: 18vw;
+  height: 6vh;
+  border: none;
+  border-radius: 10px;
+}
+.choice-button:hover {
+  width: 19vw;
+  height: 7vh;
+}
+
+.choice-button-1 {
+  background-color: rgb(103, 189, 103);
+}
+
+.choice-button-2 {
+  background-color: mediumseagreen;
+}
+
+.choice-button-3 {
+  background-color: seagreen;
+}
+
+.choice-button-4 {
+  background-color: forestgreen;
+}
+
+.choice-button-5 {
+  background-color: green;
+}
+
+.choice-button-6 {
+  background-color: darkgreen;
 }
 /* ---------------------------------- */
 
@@ -38,6 +80,7 @@ button {
   width: 70%;
   margin: auto;
 }
+/* ---------------------------------- */
 
 /* ------------- USER ---------------- */
 .user {
@@ -47,6 +90,17 @@ button {
 
 label {
   display: block;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+#number_user {
+  width: 4rem;
+  height: 1.5rem;
+  padding: .5rem;
+  font-size: 1.5rem;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 .checking {
@@ -62,12 +116,27 @@ label {
 /* ---------------------------------- */
 
 /* ------------- RESULT ---------------- */
-#result, #arrow_up, #arrow_down {
+#result {
+  width: 70%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#arrow_up, #arrow_down {
   display: inline;
   visibility: hidden;
+  font-size: 2rem;
+  padding-top: 1rem;
 }
 /* ---------------------------------- */
 
-/* ---------------------------------- */
+/* ------------- FOOTER ---------------- */
+footer {
+  text-align: center;
+}
 
+a {
+  text-decoration: none;
+  color: black;
+}
 /* ---------------------------------- */
